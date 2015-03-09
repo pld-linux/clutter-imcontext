@@ -8,7 +8,7 @@ Summary(pl.UTF-8):	Biblioteka szkieletu IMContext dla Cluttera
 Name:		clutter-imcontext
 Version:	0.1.6
 %define	snap	20100323
-Release:	0.%{snap}.1
+Release:	0.%{snap}.2
 License:	LGPL v2.1
 Group:		Libraries
 # git clone git://git.moblin.org/clutter-imcontext

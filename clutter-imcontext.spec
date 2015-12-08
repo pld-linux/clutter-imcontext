@@ -2,13 +2,14 @@
 # Conditional build:
 %bcond_without	apidocs		# do not build and package API docs
 %bcond_without	static_libs	# don't build static libraries
-#
+
+%define	snap	20100323
+%define	rel	3
 Summary:	IMContext Framework Library for Clutter
 Summary(pl.UTF-8):	Biblioteka szkieletu IMContext dla Cluttera
 Name:		clutter-imcontext
 Version:	0.1.6
-%define	snap	20100323
-Release:	0.%{snap}.2
+Release:	0.%{snap}.%{rel}
 License:	LGPL v2.1
 Group:		Libraries
 # git clone git://git.moblin.org/clutter-imcontext
@@ -60,6 +61,9 @@ Statyczna biblioteka Clutter IMContext.
 Summary:	Clutter IMContext API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki Clutter IMContext
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API and internal documentation for Clutter IMContext library.

@@ -4,7 +4,7 @@
 %bcond_without	static_libs	# don't build static libraries
 
 %define	snap	20100323
-%define	rel	3
+%define	rel	4
 Summary:	IMContext Framework Library for Clutter
 Summary(pl.UTF-8):	Biblioteka szkieletu IMContext dla Cluttera
 Name:		clutter-imcontext

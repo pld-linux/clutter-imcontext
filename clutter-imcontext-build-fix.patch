@@ -1,0 +1,19 @@
+--- clutter-imcontext/clutter-imcontext/clutter-imtext.c.orig
++++ clutter-imcontext/clutter-imcontext/clutter-imtext.c
+@@ -39,6 +39,7 @@
+ #include <stdlib.h>
+
+ #include <glib.h>
++#include <glib/gstdio.h>
+
+ #include <clutter/clutter.h>
+
+@@ -156,7 +157,7 @@
+                                    PangoAttrList *preedit_attrs,
+                                    gint cursor_pos)
+ {
+-  clutter_text_set_preedit_string(self, str, preedit_attrs, cursor_pos);
++  clutter_text_set_preedit_string(CLUTTER_TEXT (self), str, preedit_attrs, cursor_pos);
+ }
+
+ static void

@@ -4,7 +4,7 @@
 %bcond_without	static_libs	# don't build static libraries
 
 %define	snap	20100323
-%define	rel	4
+%define	rel	5
 Summary:	IMContext Framework Library for Clutter
 Summary(pl.UTF-8):	Biblioteka szkieletu IMContext dla Cluttera
 Name:		clutter-imcontext
@@ -15,6 +15,7 @@ Group:		Libraries
 # git clone git://git.moblin.org/clutter-imcontext
 Source0:	%{name}.tar.xz
 # Source0-md5:	f2b1781516c1a2928693fcfe9e954928
+Patch0:		%{name}-build-fix.patch
 URL:		http://www.moblin.org/
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake
@@ -71,6 +72,7 @@ Dokumentacja API biblioteki Clutter IMContext.
 
 %prep
 %setup -q -n %{name}
+%patch -P0 -p1
 
 %build
 %{__gtkdocize}
